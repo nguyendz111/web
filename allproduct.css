@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+
+/* Header Start */
+#top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 300px;
+    font-size: 12px;
+}
+
+#top-header p {
+    color: rgb(156, 154, 154);
+    display: inline-block;
+    font-size: 20px;
+}
+
+#top-header a .fa-solid {
+    color: rgb(190, 135, 32);
+    font-size: 20px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color: rgba(240, 238, 238, 0.5);
+
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+.Cloudfee {
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.Cloudfee img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của container */
+    display: block; /* Xóa khoảng trắng dư thừa dưới hình ảnh */
+    margin: 0 auto; /* Căn giữa hình ảnh */
+}
+
+.Cloudfee .des {
+    margin-top: 10px; /* Khoảng cách giữa hình ảnh và mô tả */
+}
+
+.Cloudfee .price {
+    margin-top: 10px; /* Khoảng cách giữa mô tả và giá */
+}
+
+.Cloudfee .quantity {
+    margin-top: 10px; /* Khoảng cách giữa giá và số lượng */
+}
+
+.Cloudfee .quantity input {
+    width: 50px; /* Độ rộng của input số lượng */
+    text-align: center; /* Căn giữa nội dung trong input */
+}
+
+
+/* Inside your CSS file */
+#search-form {
+    display: flex;
+    align-items: center;
+}
+#cart-table {
+    width: 50%; /* Đặt chiều rộng của bảng */
+    max-width: 600px; /* Giới hạn chiều rộng tối đa của bảng */
+    margin: 0 auto; /* Đặt margin tự động ở cả hai bên để căn giữa */
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cart-table th,
+#cart-table td {
+    border: none;
+    padding: 12px;
+    text-align: left;
+}
+
+#cart-table th {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#cart-table tfoot {
+    font-weight: bold;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e0e0e0;
+}
+
+#cart-table tfoot td {
+    text-align: right;
+    padding-right: 16px;
+}
+
+#total-price {
+    border-top: 2px solid #eeeeee;
+}
+
+
+#search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#top-header a,
+#header a,
+#navbar li a {
+    text-decoration: none;
+    color: #000;
+}
+
+#header>a {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar>li {
+    padding: 10px 20px;
+}
+
+#navbar li {
+    list-style: none;
+    font-weight: 700;
+    position: relative;
+}
+
+#top-header a:hover,
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgb(190, 135, 32);
+}
+
+#navbar .sub-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 20px;
+}
+
+#navbar li:hover .sub-menu {
+    display: block;
+
+}
+
+#navbar .sub-menu a {
+    background-color: rgba(240, 238, 238, 0.5);
+    min-height: 10px;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    display: block;
+}
+
+
+/* Home Page */
+/* banner */
+#banner {}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain; */
+}
+
+/* Product */
+
+#home-coffee .coffee-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    flex-wrap: wrap;
+}
+
+#home-coffee .freeship {
+    width: 46%;
+    min-width: 250px;
+    padding: 10px 12px;
+    margin: 15px 10px;
+}
+
+#home-coffee .freeship img {
+    width: 100%;
+    height: 100%;
+}
+
+#home-coffee .Cloudfee {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    margin: 15px 10px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 25px;
+
+}
+
+#home-coffee .Cloudfee:hover {
+    transform: scale(1.05);
+}
+
+#home-coffee .Cloudfee img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#home-coffee .Cloudfee .des {
+    text-align: center;
+    padding: 10px 0;
+}
+
+#home-coffee .Cloudfee .price {
+    display: flex;
+    justify-content: space-between;
+    width: 264px;
+
+}
+
+#home-coffee .Cloudfee .price p {
+    font-size: 15px;
+    font-weight: 700;
+    color: #645e5e;
+}
+
+#home-coffee .Cloudfee .price .fa-cart-shopping {
+    color: #645e5e;
+}
+
+
+#check {
+    width: 100%;
+    height: 2000px;
+}
+
+.highlight {
+    background-color: yellow;
+    /* Adjust the highlighting style as needed */
+    color: red;
+}
+
+#cart-table {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+    border: 1px solid black;
+}
+
+#cart-table.show {
+    display: block;
+    opacity: 1;
+}

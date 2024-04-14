@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levents®</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- top header -->
+    <section id="top-header">
+        <div class="location">
+            <a href="#"><i class=""></i></a>
+            <a href="#">
+                <p>Levents®</p>
+            </a>
+        </div>
+    </section>
+    <!-- header -->
+    <section id="header">
+        <a href="#"><img src="" class="logo" alt="">levents</a>
+        <!-- <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button type="submit" id="search-button">Search</button>
+        </form> -->
+        <div>
+            <ul id="navbar">
+                <li><a  href="allproduct.html">ALL</a>
+                </li>
+                <li><a href="tops.html">TOPS</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">T-SHIRTS</a></li>
+                        <li><a href="#">POLO</a></li>
+                        <li><a href="#">SHIRTS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="bottoms.html">BOTTOMS</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">BOTTOMS</a></li>
+                        <li><a href="#">PANTS</a></li>
+                        <li><a href="#">SHORTPANTS</a></li>
+                    </ul>
+                </li>
+                <li><a href="outerwear.html">OUTERWEAR</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">HOODIES</a></li>
+                        <li><a href="#">SWEATERS</a></li>
+                        <li><a href="#">JACKETS</a></li>
+                        <li><a href="#">VARSITY</a></li>
+                        <li><a href="#">CARDIGANS</a></li>
+                        <li><a href="#">GILE</a></li>   
+                    </ul>
+                </li>
+                <li><a href="accessories.html">CULTURE</a>
+                </li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping" id="cart-icon"></i></a></li>
+                
+                <li><a href="sign_up.html"><i class="fa-solid fa-user-tie" id="cart-icon"></i></a></li>
+            </ul>
+        </div>
+        <!-- Bảng giỏ hàng -->
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                    
+                </tr>
+            </thead>
+            <tbody> </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" id="total-price">Tổng giá: 0đ</td>
+                    <th class="checkout-column"><button id="checkout-btn" class="checkout-btn">Thanh toán</button></th>
+                </tr>
+            </tfoot>
+        </table>
+        <script>
+            document.getElementById('checkout-btn').addEventListener('click', function() {
+    // Hiển thị thông báo khi sản phẩm được thêm vào giỏ hàng
+    alert('Sản phẩm đã được thêm vào giỏ hàng!');
+    
+    // Lưu thông tin giỏ hàng vào Local Storage trước khi chuyển hướng
+    let cartRows = document.querySelectorAll('#cart-table tbody tr');
+    let cartData = [];
+    
+    cartRows.forEach(function(row) {
+        let productName = row.cells[0].textContent;
+        let productQuantity = parseInt(row.cells[1].textContent);
+        let productPrice = parseFloat(row.cells[2].textContent.replace('đ', '').replace(',', ''));
+        
+        cartData.push({
+            name: productName,
+            quantity: productQuantity,
+            price: productPrice
+        });
+    });
+    
+    localStorage.setItem('cartData', JSON.stringify(cartData));
+    
+    // Sử dụng một cờ để đảm bảo dữ liệu đã được lưu trước khi chuyển hướng trang
+    let dataSaved = localStorage.getItem('cartData');
+    if (dataSaved) {
+        // Chuyển hướng trang qua "cart.html" chỉ khi dữ liệu đã được lưu thành công
+        window.location.href = 'cart.html';
+    } else {
+        alert('Có lỗi xảy ra khi lưu dữ liệu giỏ hàng. Vui lòng thử lại sau.');
+    }
+});
+        </script>
+        
+    </section>
+
+    <script src="cart.js"></script>
+    <!-- banner -->
+    <section id="banner">
+        <a href="menu.html"><img
+                src="https://levents.asia/cdn/shop/files/collection_list.jpg?v=1710928431&width=2000"
+                alt=""></a>
+    </section>
+
+    <!-- home -->
+    <section id="home-coffee">
+        <div class="coffee-container">
+            <div class="freeship"><a href="#"><img
+                src="https://th.bing.com/th/id/R.221046bf0adce07694d771f68e5fccc0?rik=AjUxUFWTZ0DBhw&riu=http%3a%2f%2faophongdep.vn%2fwp-content%2fuploads%2f2018%2f11%2fao-phong-dep-ha-noi.jpg&ehk=138JaMVtzw9cUGoaftFbnrEGI0FlvBWKhaEkWejgA%2fM%3d&risl=&pid=ImgRaw&r=0"
+                alt="Freeship"></a>
+    </div>
+    <div class="Cloudfee">
+        <img src="https://cf.shopee.vn/file/d38263feeadddb5edc65d9ba2be4b99e"
+            alt="">
+        <div class="des">
+            <span>Levents® Flowers Window</span>
+        </div>
+
+        <div class="price">
+            <p><span>299.000 VND</span></p>
+            <a href="#" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+    <!-- The Coffee House Sữa Đá -->
+    <div class="Cloudfee">
+        <img src="https://i.ezbuy.sg/FjEqgbNyBklHg-G0BoXJa_l1q8ux"
+            alt="">
+        <div class="des">   
+            <span>Levents® Short Sleeve T-shirt Korean</span>
+        </div>
+
+        <div class="price">
+            <p><span>299.000 VND</span></p>
+            <a href="#" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+    <!-- Hi-Tea Vải -->
+    <div class="Cloudfee">
+        <img src="https://cdn11.bigcommerce.com/s-c7qlm8a06j/images/stencil/728x728/products/1306/9558/korean-style-orange-tee-cosmiquestudio-13__77688.1643988786.jpg?c=1"
+            alt="">
+        <div class="des">
+            <span>Levents® 2Lip Tee/ Orenge</span>
+        </div>
+
+        <div class="price">
+            <p><span>390.000 VND</span></p>
+            <a href="#" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+    <!-- Cà Phê Sữa Đá -->
+    <div class="Cloudfee">
+        <img src="https://justplay.vn/wp-content/uploads/2022/08/z3639668786293_2f33711fc36eaa19326b9368cf5fb04b-scaled.jpg"
+            alt="">
+        <div class="des">
+            <span>Levents® 05 Jersey/ White</span>
+        </div>
+
+        <div class="price">
+            <p><span>255.000 VND</span></p>
+            <a href="#" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+    <!-- CloudTea Oolong Berry -->
+    <div class="Cloudfee">
+        <img src="https://th.bing.com/th/id/OIF.vGRsEUYrvyDkggZKH0y3RQ?rs=1&pid=ImgDetMain"
+            alt="">
+        <div class="des">
+            <span>Levents® HoimetParis/ White</span>
+        </div>
+
+        <div class="price">
+            <p><span>299.000 VND</span></p><a href="#" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+    <!-- CloudTea Trà Xanh Tây Bắc -->
+    <div class="Cloudfee">
+        <img src="https://aothunphamdo.com/wp-content/uploads/2022/12/ao-phong-tay-lo-nu-dep.jpg"
+            alt="">
+        <div class="des">
+            <span>Levents® senssi/Black</span>
+        </div>
+
+        <div class="price">
+            <p><span>199.000 VND</span></p>
+            <a href="#" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+     <!-- Cà Phê Sữa Đá -->
+     <div class="Cloudfee">
+        <img src="https://down-vn.img.susercontent.com/file/1f4f8b45cda5c6cfbf06bfd6a4423e0a"
+            alt="">
+        <div class="des">
+            <span>Levents® BQSTON11 Baggy Girl Jeans</span>
+        </div>
+
+        <div class="price">
+            <p><span>299.000 VND</span></p>
+            <a href="#" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+     <!-- Cà Phê Sữa Đá -->
+     <div class="Cloudfee">
+        <img src="https://my-test-11.slatic.net/p/e68fc06e6c9bc9fbc9d91a69295c0200.jpg"
+            alt="">
+        <div class="des">
+            <span>Levents® khaki pocket pants</span>
+        </div>
+
+        <div class="price">
+            <p><span>399.000 VND</span></p>
+            <a href="#" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+     <!-- Cà Phê Sữa Đá -->
+     <div class="Cloudfee">
+        <img src="https://down-vn.img.susercontent.com/file/8a8e4a14468bc4f50246296277968873"
+            alt="">
+        <div class="des">
+            <span>Levents® Jogger pants with box pockets and straps</span>
+        </div>
+
+        <div class="price">
+            <p><span>299.000 VND</span></p>
+            <a href="#" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+     <!-- Cà Phê Sữa Đá -->
+     <div class="Cloudfee">
+        <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ln46lz0t39p443"
+            alt="">
+        <div class="des">
+            <span>Wide Leg KaKi Pants with Elastic Waist Pockets</span>
+        </div>
+
+        <div class="price">
+            <p><span>444.000 VND</span></p>
+            <a href="#" class="cart-button"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+     <!-- Cà Phê Sữa Đá -->
+     <!-- Cà Phê Sữa Đá -->
+
+     <section id="banner">
+        <a href="menu.html"><img
+                src="https://levents.asia/cdn/shop/files/2_633345cf-78e6-4567-a969-4b908a0ad95e.jpg?v=1710925196&width=2000"
+                alt=""></a>
+    </section>
+</div>
+ <!-- FOOTER -->
+ <section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>our branches</h3>
+            <a href="#"><i class="fas fa-arrow-right"></i> india</a>
+            <a href="#"><i class="fas fa-arrow-right"></i> USA</a>
+            <a href="#"><i class="fas fa-arrow-right"></i> france</a>
+            <a href="#"><i class="fas fa-arrow-right"></i> africa</a>
+            <a href="#"><i class="fas fa-arrow-right"></i> japan</a>
+        </div>
+
+        <div class="box">
+            <h3>Support</h3>
+            <a href="#home"><i class="fas fa-arrow-right"></i> Account</a>
+            <a href="#about"><i class="fas fa-arrow-right"></i> Instructions due to size</a>
+            <a href="#menu"><i class="fas fa-arrow-right"></i> Return policy</a>
+            <a href="#review"><i class="fas fa-arrow-right"></i> Transfer policy</a>
+            <a href="#book"><i class="fas fa-arrow-right"></i> Membership policy</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"><i class="fas fa-phone"></i> +86 865011004</a>
+            <a href="#"><i class="fas fa-phone"></i> +86 865011004</a>
+            <a href="#"><i class="fas fa-envelope"></i> Levents®@gmail.com</a>
+            <a href="#"><i class="fas fa-envelope"></i> Nam Định,Đường vào tim em ,Hà Nội</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="https://www.facebook.com/search/top?q=levents"><i class="fab fa-facebook-f"></i> facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+            <a href="https://www.instagram.com/levents.official/"><i class="fab fa-instagram"></i> instagram</a>
+            <a href="#"><i class="fab fa-linkedin"></i> Website</a>
+        </div>
+    </div>
+
+    <div class="credit">created by <span>Mr.NguyênDzz</span> | all rights reserved</div>
+
+</section>
+
+
+<script src="web.js"></script>
+</body>
+
+</html>

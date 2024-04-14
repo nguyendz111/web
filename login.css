@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login_container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 320px;
+  }
+  
+  .login h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .login form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login form h5 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .login form input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login form input:focus {
+    border-color: #007bff;
+  }
+  
+  .login form button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .signup__registerButton {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .signup__registerButton:hover {
+    color: #0056b3;
+  }
+  #top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 300px;
+    font-size: 12px;
+}
+
+#top-header p {
+    color: rgb(156, 154, 154);
+    display: inline-block;
+    font-size: 20px;
+}
+
+#top-header a .fa-solid {
+    color: rgb(190, 135, 32);
+    font-size: 20px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color: rgba(240, 238, 238, 0.5);
+
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+
+/* Inside your CSS file */
+#search-form {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#top-header a,
+#header a,
+#navbar li a {
+    text-decoration: none;
+    color: #000;
+}
+
+#header>a {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar>li {
+    padding: 10px 20px;
+}
+
+#navbar li {
+    list-style: none;
+    font-weight: 700;
+    position: relative;
+}
+
+#top-header a:hover,
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgb(190, 135, 32);
+}
+
+#navbar .sub-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 20px;
+}
+
+#navbar li:hover .sub-menu {
+    display: block;
+
+}
+
+#navbar .sub-menu a {
+    background-color: rgba(240, 238, 238, 0.5);
+    min-height: 10px;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    display: block;
+}
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+  
